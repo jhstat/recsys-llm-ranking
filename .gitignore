@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Data (download via scripts, don't commit)
+data/raw/
+data/processed/
+*.csv
+*.parquet
+*.pkl
+
+# Model artifacts
+checkpoints/
+*.pt
+*.pth
+*.onnx
+
+# Experiment tracking
+wandb/
+runs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
