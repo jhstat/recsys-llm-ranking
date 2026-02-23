@@ -116,12 +116,19 @@ recsys-llm-ranking/
 
 ## Tech Stack
 
-- PyTorch (core — models, training, inference)
-- FAISS or ScaNN (approximate nearest neighbor retrieval)
-- Transformers library (pretrained LLM for cold-start embeddings only — not for model training)
-- FastAPI or TorchServe (model serving)
-- Weights & Biases or TensorBoard (experiment tracking)
-- Docker (containerized serving)
+- **PyTorch** (core — models, training, inference)
+- **FAISS** (approximate nearest neighbor retrieval — Meta-built, likely used on the team)
+- **sentence-transformers / e5-base-v2** (pretrained LLM for cold-start embeddings only — 768-dim, not trained by us)
+- **FastAPI** (model serving — lighter than TorchServe, more educational)
+- **Weights & Biases** (experiment tracking — run comparison, hyperparameter logging, artifact versioning)
+- **Docker** (containerized serving)
+
+## Locked-In Decisions (Session 1, 2026-02-23)
+
+- **Dataset:** Amazon Product Reviews 2023, Electronics category (~20M+ reviews). Single category is sufficient — scale-up optional later.
+- **Ranking architecture:** DLRM (Meta's own architecture). Sparse embeddings → bottom MLP → pairwise dot-product feature interactions → top MLP.
+- **Experiment tracking:** W&B (free tier). Teaches proper logging discipline that transfers to Meta's internal tools.
+- **Cold-start LLM:** e5-base-v2 (768-dim). Inference only — we don't train the LLM.
 
 ## What NOT to Do
 
