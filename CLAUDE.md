@@ -12,6 +12,22 @@ Key context from the roadmap:
 - Time budget: ~5 hrs/wk (Phase 1A) → ~10 hrs/wk (Phase 1B onward)
 - Total hours before internship: ~115
 
+## Meta Team Context
+
+**Team:** Verticals IQ ML Core Foundation 1
+**Org:** FB Verticals Pillar (Marketplace, Groups, Local Events, Dating) — Young Adult Strategy for Facebook App.
+
+The team owns Core ML Foundation: building SOTA large-scale ML solutions across data, modeling, training, and inference. Recently started LLM Foundation work for Verticals GenAI (Marketplace GenAI Listing Creation, Jobs cold-start LLM-based ranking).
+
+**Research areas:** GPU Computation, ML Systems, Recommendation Systems, Retrieval and Ranking Systems, AI Infra (Training, inference), AutoML, LLMs.
+
+**Why this matters for the project:** Every component maps to the team's stack:
+- Two-tower retrieval → retrieval & ranking systems
+- Training pipeline → ML systems, training infra
+- Inference optimization → AI infra, GPU computation
+- LLM cold-start → LLM Foundation work (directly mirrors "Jobs cold start LLM-based ranking")
+- Raw PyTorch → Meta's own framework, the default at this team
+
 ## Project Purpose
 
 Build an end-to-end recommendation system with LLM-augmented ranking and ML infrastructure — all in raw PyTorch. The project is designed to build hands-on skills aligned to the Meta ML Core Foundation team stack before the internship starts.
